@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Sahil Kalam</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        h1 {
+            color: white;
+            background: #333;
+            text-align: center;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #444;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #222;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact info box */
+        .contact-info {
+            background: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .contact-info a {
+            color: #0077cc;
+            font-weight: bold;
+        }
+         /* Button */
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #555;
+        }
+
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+         /* Dark mode */
+        .dark-mode {
+            background: #222;
+            color: #fff; /* Dark mode text white */
+        }
+        .dark-mode h1 {
+            background: #111;
+        }
+        .dark-mode .navbar {
+            background: #111;
+        }
+        .dark-mode button {
+            background: #f4f4f9;
+            color: #111;
+        }
+        .dark-mode button:hover {
+            background: #ddd;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact</h1>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="contact-info">
+        <p>Email: <a href="mailto:sahilkalam@gmail.com">sahilkalam@gmail.com</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/sahilkalam93/" target="_blank">@sahilkalam93</a></p>
+    </div>
+
+    <h2>Follow me on Instagram</h2>
+    <p style="text-align:center;">Join my Instagram account for updates, follow and message me anytime.</p>
+    <!-- Dark/Light toggle button -->
+   <button id="toggleMode">🌙 Dark Mode</button>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", () => {
+           const toggleBtn = document.getElementById("toggleMode");
+           const body = document.body;
+
+           toggleBtn.addEventListener("click", () => {
+               body.classList.toggle("dark-mode");
+               if (body.classList.contains("dark-mode")) {
+                   toggleBtn.textContent = "☀️ Light Mode";
+               } else {
+                   toggleBtn.textContent = "🌙 Dark Mode";
+               }
+           });
+       });
+   </script>
+
+    <footer>
+        <p>Thanks for visiting! Stay connected 🚀</p>
+    </footer>
+</body>
+</html>
